@@ -1,0 +1,239 @@
+$fontURL: "./fonts/oswald-v40-latin_cyrillic-regular.";
+$fontFamily: "Oswald";
+$bgApp: #ededed;
+$fontSize: 20px;
+$mainColor: black;
+$mainBorder: 1px solid $mainColor;
+$boldBorder: 3px solid $mainColor;
+$detailsColor: #dfdfdf;
+
+@mixin wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin hoverAnimation {
+  transition: 0.3s;
+  &:hover {
+    background-color: $detailsColor;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+.App {
+  // color: $mainColor;
+  font-size: $fontSize;
+  font-family: $fontFamily;
+  background: $bgApp;
+  letter-spacing: 2px;
+  width: 100%;
+  height: 100vh;
+}
+.main,
+.default,
+.btns,
+.numbers li {
+  @include wrap();
+}
+.btn,
+.numbers li {
+  @include hoverAnimation();
+}
+.gameAreaTd {
+  background-color: $bgApp;
+}
+.activeInput {
+  background-color: $detailsColor;
+}
+
+.container {
+  max-width: 1200px;
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+}
+.main {
+  max-width: 540px;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+.default {
+  grid-gap: 50px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+.win,
+.gameOver {
+  position: relative;
+  h1 {
+    font-size: 50px;
+  }
+}
+.menu {
+  h1 {
+    font-size: 70px;
+  }
+  p {
+    font-size: 35px;
+  }
+}
+.btns {
+  grid-gap: 30px;
+  width: 100%;
+}
+.btn {
+  display: block;
+  padding: 8px;
+  width: 200px;
+  border: $mainBorder;
+  border-radius: 2px;
+  text-decoration: none;
+  font-size: 20px;
+  color: $mainColor;
+  text-align: center;
+  letter-spacing: 0;
+  box-shadow: 0px 0px 22px 6px rgba(0, 0, 0, 0.12);
+}
+.gameArea {
+  width: 100%;
+  border-collapse: collapse;
+  border: $boldBorder;
+
+  tr:nth-of-type(3n) {
+    border-bottom: $boldBorder;
+  }
+  td {
+    width: 50px;
+    height: 50px;
+    border: $mainBorder;
+    user-select: none;
+    cursor: pointer;
+    text-align: center;
+    &:nth-of-type(3n) {
+      border-right-width: 3px;
+    }
+  }
+}
+.numbers {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  li {
+    border: $mainBorder;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+  }
+}
+.errors {
+  font-size: 25px;
+  user-select: none;
+  span {
+    font-weight: bold;
+  }
+}
+
+.Rules {
+  @include wrap;
+  flex-direction: column;
+  grid-gap: 20px;
+  padding-top: 15px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  p {
+    font-size: 20px;
+    text-align: justify;
+    span:nth-of-type(1) {
+      color: #f7c92a;
+    }
+    span:nth-of-type(2) {
+      color: #f23175;
+    }
+    span:nth-of-type(3) {
+      color: #18bf53;
+    }
+  }
+  p:nth-of-type(2) {
+    font-size: 25px;
+    font-weight: 700;
+  }
+}
+.rules__image {
+  max-width: 320px;
+  box-shadow: 0px 0px 27px 12px rgba(0, 0, 0, 0.14);
+  img {
+    width: 100%;
+  }
+}
+
+.sad-cool-img {
+  position: absolute;
+}
+.sad-img {
+  top: 175px;
+}
+.cool-img {
+  top: 200px;
+}
+@media screen and (max-width: 635px) {
+  .Rules {
+    grid-gap: 20px;
+  }
+  .rules__image {
+    max-width: 270px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .Rules {
+    h1 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+}
+@media screen and (max-width: 410px) {
+  .sad-cool-img {
+    top: 150px;
+  }
+  .btns {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 370px) {
+  .Rules {
+    p {
+      font-size: 16px;
+    }
+  }
+}
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: url($fontURL + "eot"); /* IE9 Compat Modes */
+  src: local(""), url($fontURL + "eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url($fontURL + "woff2") format("woff2"),
+    /* Super Modern Browsers */ url($fontURL + "woff") format("woff"),
+    /* Modern Browsers */ url($fontURL + "ttf") format("truetype"),
+    /* Safari, Android, iOS */ url($fontURL + "svg#Oswald") format("svg"); /* Legacy iOS */
+}
