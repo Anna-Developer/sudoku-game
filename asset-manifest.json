@@ -1,15 +1,21 @@
 {
   "files": {
-    "main.css": "/sudoku-game/static/css/main.073c9b0a.css",
-    "main.js": "/sudoku-game/static/js/main.0ab6337b.js",
+    "main.css": "/sudoku-game/static/css/main.915a5b15.css",
+    "main.js": "/sudoku-game/static/js/main.fe14fde8.js",
     "static/js/787.238c6b77.chunk.js": "/sudoku-game/static/js/787.238c6b77.chunk.js",
+    "static/media/rules.jpg": "/sudoku-game/static/media/rules.77e0971f9c8f5861ddf2.jpg",
+    "static/media/oswald-v40-latin_cyrillic-regular.svg": "/sudoku-game/static/media/oswald-v40-latin_cyrillic-regular.998bcd1c2db3644bda6c.svg",
+    "static/media/oswald-v40-latin_cyrillic-regular.ttf": "/sudoku-game/static/media/oswald-v40-latin_cyrillic-regular.c15f4783739d039343d7.ttf",
+    "static/media/oswald-v40-latin_cyrillic-regular.woff": "/sudoku-game/static/media/oswald-v40-latin_cyrillic-regular.cbfa85720bbf9c0de87b.woff",
+    "static/media/oswald-v40-latin_cyrillic-regular.eot": "/sudoku-game/static/media/oswald-v40-latin_cyrillic-regular.c213256f3411c646306d.eot",
+    "static/media/oswald-v40-latin_cyrillic-regular.woff2": "/sudoku-game/static/media/oswald-v40-latin_cyrillic-regular.386f0e450763a11ec759.woff2",
     "index.html": "/sudoku-game/index.html",
-    "main.073c9b0a.css.map": "/sudoku-game/static/css/main.073c9b0a.css.map",
-    "main.0ab6337b.js.map": "/sudoku-game/static/js/main.0ab6337b.js.map",
+    "main.915a5b15.css.map": "/sudoku-game/static/css/main.915a5b15.css.map",
+    "main.fe14fde8.js.map": "/sudoku-game/static/js/main.fe14fde8.js.map",
     "787.238c6b77.chunk.js.map": "/sudoku-game/static/js/787.238c6b77.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.0ab6337b.js"
+    "static/css/main.915a5b15.css",
+    "static/js/main.fe14fde8.js"
   ]
 }
