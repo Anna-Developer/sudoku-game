@@ -1,10 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import {
-  setValueActionCreator,
-  startGameActionCreator,
-} from "../store/reducer";
 
 const Main = (props) => {
   const navigate = useNavigate();
@@ -14,24 +10,23 @@ const Main = (props) => {
         return;
       }
     }
-    props.dispatch(startGameActionCreator());
+    props.startGame();
     navigate("/win");
   };
   const isGameOver = () => {
     if (props.errors < 3) {
       return;
     }
-    props.dispatch(startGameActionCreator());
+    props.startGame();
     navigate("/gameOver");
   };
   useEffect(() => {
     isWin();
     isGameOver();
-    window.onpopstate = () => props.dispatch(startGameActionCreator());
+    window.onpopstate = () => props.startGame();
   }, [props.matrix, props.errors]);
   const setValue = (e) => {
-    const action = setValueActionCreator(e.target.dataset.value, idxArr);
-    props.dispatch(action);
+    props.setValue(e.target.dataset.value, idxArr);
   };
   const [idxArr, newIdxArr] = useState([0, 0]);
   const setActiveInput = (a, b) => {
